@@ -1,17 +1,29 @@
-class Demo {
+import java.util.Scanner;
+class Convert {
     public static void main(String[] args) {
-        //Celsius to Fahrenheit
-        double c = 102;
-        double x = (double)9/(double)5;
-        int y = 32;
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println((c*x+y) + "°C");
+        String unit = new String();
+        unit = sc.nextLine();
 
-        //Fahrenheit to Celsius
-        double f = 215.6;
-        double w = (double)5/(double)9;
-        int v = 32;
+        if(unit.equals("C")) {
+            double c = sc.nextDouble();
 
-        System.out.println(((f-v)*w) + "°F");
+            //Celsius to Fahrenheit
+            double x = (double)9/(double)5;
+            int y = 32;
+
+            System.out.println((c*x+y) + "°C");
+        }
+        else if(unit.equals("F")) {
+            double f = sc.nextDouble();
+
+            //Fahrenheit to Celsius
+            double w = (double)5/(double)9;
+            int v = 32;
+
+            System.out.println(((f-v)*w) + "°F");
+        }
+        sc.close();
     }
 }

@@ -13,7 +13,7 @@ class Convert {
             double x = (double)9/(double)5;
             int y = 32;
 
-            System.out.println((c*x+y) + "°C");
+            System.out.println((c*x+y) + "°F");
         }
         else if(unit.equals("F")) {
             double f = sc.nextDouble();
@@ -22,7 +22,7 @@ class Convert {
             double w = (double)5/(double)9;
             int v = 32;
 
-            System.out.println(((f-v)*w) + "°F");
+            System.out.println(((f-v)*w) + "°C");
         }
         sc.close();
     }

@@ -6,7 +6,7 @@ class Convert {
         String unit = new String();
         unit = sc.nextLine();
 
-        if(unit.equals("C")) {
+        if(unit.equals("C") || unit.equals("c")) {
             double c = sc.nextDouble();
 
             //Celsius to Fahrenheit
@@ -15,7 +15,7 @@ class Convert {
 
             System.out.println((c*x+y) + "°F");
         }
-        else if(unit.equals("F")) {
+        else if(unit.equals("F") || unit.equals("f")) {
             double f = sc.nextDouble();
 
             //Fahrenheit to Celsius

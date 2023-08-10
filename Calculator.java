@@ -6,6 +6,7 @@ class Calculate {
     String optr = new String();
     optr = sc.nextLine();
 
+    //Addition
     if(optr.equals("+")) {
       double num1 = sc.nextDouble();
       double num2 = sc.nextDouble();
@@ -13,7 +14,8 @@ class Calculate {
       double sum = (double)num1 + (double)num2;
 
       System.out.println("The sum of " + num1 + " + " + num2 + " is " + sum);
-  }
+}
+    //Subtraction
     if(optr.equals("-")) {
       double num1 = sc.nextDouble();
       double num2 = sc.nextDouble();
@@ -22,6 +24,7 @@ class Calculate {
 
       System.out.println("The difference of " + num1 + " - " + num2 + " is " + diff);
 }
+    //Multiplication
     if(optr.equals("*")) {
       double num1 = sc.nextDouble();
       double num2 = sc.nextDouble();
@@ -30,6 +33,7 @@ class Calculate {
 
       System.out.println("The product of " + num1 + " x " + num2 + " is " + prod);
 }
+    //Division
     if(optr.equals("/")) {
       double num1 = sc.nextDouble();
       double num2 = sc.nextDouble();

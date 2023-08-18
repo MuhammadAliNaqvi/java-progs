@@ -10,6 +10,13 @@ class Calculate {
     System.out.println("Choose an operator: +, -, *, or /");
     optr = sc.nextLine();
 
+    if(!(optr.equals("+") || optr.equals("-") || optr.equals("*") || optr.equals("/"))){
+      System.out.println("Invalid operator!");
+      
+      sc.close();
+      return;
+    }
+
     //Ask for first number
     System.out.println("Enter first number");
     double num1 = sc.nextDouble();
@@ -18,34 +25,31 @@ class Calculate {
     System.out.println("Enter second number");
     double num2 = sc.nextDouble();
 
+    double result = 0.0;
+
     //Addition
     if(optr.equals("+")) {
 
-      double sum = (double)num1 + (double)num2;
-
-      System.out.println(num1 + " + " + num2 + " = " + sum);
-}
+      result = (double)num1 + (double)num2;
+    }
     //Subtraction
-    if(optr.equals("-")) {
+    else if(optr.equals("-")) {
 
-      double diff = (double)num1 - (double)num2;
-
-      System.out.println(num1 + " - " + num2 + " = " + diff);
-}
+      result = (double)num1 - (double)num2;
+    }
     //Multiplication
-    if(optr.equals("*")) {
+    else if(optr.equals("*")) {
 
-      double prod = (double)num1 * (double)num2;
-
-      System.out.println(num1 + " x " + num2 + " = " + prod);
-}
+      result = (double)num1 * (double)num2;
+    }
     //Division
-    if(optr.equals("/")) {
+    else if(optr.equals("/")) {
 
-      double quot = (double)num1 / (double)num2;
+      result = (double)num1 / (double)num2;
+    }
 
-      System.out.println(num1 + " / " + num2 + " = " + quot);
-}
+    System.out.println(num1 + " " + optr + " " + num2 + " = " + result);
+
     sc.close();
 }
 }
